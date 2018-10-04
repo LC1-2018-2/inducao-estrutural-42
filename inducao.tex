@@ -5,17 +5,20 @@
 
 % The following packages can be found on http:\\www.ctan.org
 \usepackage{graphics} % for pdf, bitmapped graphics files
-\usepackage{epsfig} % for postscript graphics files
+\usepackage{epsfig}   % for postscript graphics files
 \usepackage{mathptmx} % assumes new font selection scheme installed
-\usepackage{times} % assumes new font selection scheme installed
-\usepackage{amsmath} % assumes amsmath package installed
+\usepackage{times}    % assumes new font selection scheme installed
+\usepackage{amsmath}  % assumes amsmath package installed
 \usepackage{amssymb}  % assumes amsmath package installed
+\usepackage{makeidx}  % cria indice remissivo \makeindex no preanbulo, \printindex no final do texto para colocação do indice remissivo e \index{} para marcar a palavra que deve ser colocada no indice.
 
-\title{\LARGE \bf
-O Princípio da Indução e suas Aplicações
-}
+\title{\LARGE \bf O Princípio da Indução e suas Aplicações }
 
-\author{Flávio L. C. de Moura}
+\author{Felipe Luís Pinheiro\footnote{matricula:18/0052667}}
+
+\date{ 18 de novembro de 2018}
+
+\makeindex
 
 \begin{document}
 \maketitle
@@ -24,14 +27,72 @@ O Princípio da Indução e suas Aplicações
 
 Neste trabalho mostraremos diversas utilizações do princípio de indução em Ciência da Computação.
 
+Começamos discutindo o principio da indução e suas implicações, posteriormente definimos os problemas a serem discutidos e por fim discutimos os problemas propostos até a sua completa solução.
+
 \end{abstract}
 
 \section{Introdução}
 
-Indução é um princípio importante...
+%fazer revisão (curta) sobre indução
+Indução \index{Indução} é um princípio importante...
+
 
 \section{Indução Estrutural}
+%fazer revisão (curta) sobre indução estrutural
+
+\section{Correção}
+%fazer revisão (curta) sonre correção
+
+\section{Problemas}
+
+Nesta seção mostramos os dois problemas a serem discutidos e também mostramos as suas respectivas soluções.
+
+\subsection{Problema 1}
+
+\textbf{Problema 1}: Prove a equivalência entre os princípios da indução forte (PIF) e da indução matemática (PIM)\cite{Apostila}.
+
+
+\subsection{Problema 2}
+
+\textbf{Problema 2}: Agora utilizaremos o conhecimento adquirido sobre indução para provar a correção de um algoritmo de ordenação de listas conhecido como ``insertion sort'', ou ordenação por inserção. O pseudocódigo deste algoritmo é dado a seguir:
+
+    \begin{equation*}
+        \textrm{insertionSort}(l) =
+        \left\{
+      \begin{array}{ll}
+        l, & \textrm{se } l = [] \\
+        \textrm{insert}(h, \textrm{insertSort}(l')), & \textrm{se } l = h :: l'
+      \end{array}
+    \right.
+    \end{equation*}
+		
+onde 
+
+    \begin{equation*}
+        \textrm{insert}(x,l) =
+        \left\{
+      \begin{array}{ll}
+        x::[], & \textrm{se } l = [] \\
+        x::l, & \textrm{se } l = h::l' \textrm{ e } x \leq h \\
+        , & \textrm{ e } x > h 
+      \end{array}
+    \right.
+    \end{equation*}
+
+Nosso objetivo é provar que o algoritmo acima é correto, mas o que isto significa? Como expressar este fato por meio de um teorema? Quais passos intermediários você julga que serão necessários para provar este teorema? Explique e justifique sua solução, e os passos que utilizou para obtê-la, de forma clara e completa por meio de um relatório detalhado\cite{Apostila}.
+
 
 \section{Conclusão}
+
+\begin{thebibliography}{9}
+
+\bibitem{Apostila}
+Flávio L. C. de Moura (Prof.).
+\textit{Indução Matemática}.
+
+
+\end{thebibliography}
+
+\printindex
 
 \end{document}
