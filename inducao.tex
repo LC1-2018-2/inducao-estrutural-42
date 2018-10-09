@@ -34,7 +34,26 @@ Começamos discutindo o principio da indução e suas implicações, posteriorme
 \section{Introdução}
 
 %fazer revisão (curta) sobre indução
-Indução \index{Indução} é um princípio importante...
+Principio da Indução finita \index{Indução finita} é formalmente definido como:\\
+\textbf{Definição 1}. Seja $P(n)$ uma quantidade associada aos números naturais. $P$ é um predicado unário cujo argumento é um número natura, e suponhamos que:
+\begin{description}
+	\item[Base de Indução (BI)]: \index{Base de Indução (BI)} $p(1)$ é verdadeiro;
+	\item[Passo Indutivo (PI)]: \index{Passo Indutivo (PI)} para todo número natura $n$, se $P(n)$ é verdadeiro então $P(n+1)$ é verdadeiro
+\end{description}
+Nesta condição, a propriedade $p(n)$ é verdadeira para todo número natural $n$.
+
+Para se realizar uma prova mediante processo indutivo devemos provar que \textbf{BI} é verdadeiro, o que pode ser provado mediante aplicação direta da propriedade em estudo, e após devemos realizar o \textbf{PI} e provar que a propriedade continua válida para $n+1$ qualquer, considerando que ela é válida pra $n$.
+
+também pode ocorrer de existir uma propriedade que só comece a ser válida depois de algum valor específico, sendo assim definimos o principio da indução finita generalizada \index{Indução finita generalizada} como:\\
+\textbf{Definição 2}: Seja $p(n)$ uma propriedade sbre os números naturais que satisfaz as seguintes condições: 
+\begin{description}
+	\item[(BI)]: O número natural $m_0$ satisfaz a propriedade $p$;
+	\item[(PI)]: Se um número natural $n$ satisfaz a propriedade $P$ então seu sucessor também satisfaz a propriedade $P$.
+\end{description}
+Então todos os números naturais maiores ou iguais a $m_0$ satisfazem a propriedade $P$.
+
+Para finalizar precisamos definir o principio da indução forte, como:\\
+\textbf{Teorema 1}: Seja $P$ uma propriedade referente aos números naturais. Dado $n \in \mathbb{N}$, se a validade de $P$ para todo número natural menor do que $n$ implicar  que $P$ é verdadeio para $n$, então $P$ é verdadeira para todos os números naturais. Ou ainda, se $\forall_n ( \forall_m ,\, m < n \rightarrow P(m)) \rightarrow p(n)$ então $\forall_n ,\, P(n)$.
 
 
 \section{Indução Estrutural}
@@ -50,6 +69,14 @@ Nesta seção mostramos os dois problemas a serem discutidos e também mostramos
 \subsection{Problema 1}
 
 \textbf{Problema 1}: Prove a equivalência entre os princípios da indução forte (PIF) e da indução matemática (PIM)\cite{Apostila}.
+
+Precisamos provar que $PIF \Leftrightarrow PIM$, ou seja, $PIF \rightarrow PIM$ e $PIM \rightarrow PIF$.
+
+\subsubsection*{$PIF \rightarrow PIM$}
+Nosso objetivo agora é provar a implicação $PIF \rightarrow PIM$.
+
+
+\subsubsection*{$PIM \rightarrow PIF$}
 
 
 \subsection{Problema 2}
@@ -93,6 +120,6 @@ Flávio L. C. de Moura (Prof.).
 
 \end{thebibliography}
 
-\printindex
+0\printindex
 
 \end{document}
